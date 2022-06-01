@@ -1,8 +1,15 @@
-import '../styles/globals.css'
+import { ChakraProvider } from 'lib/chakra'
 import type { AppProps } from 'next/app'
+import React from 'react'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
+  const { cookies } = pageProps
+
+  return (
+    <ChakraProvider cookies={cookies}>
+      <Component {...pageProps} />
+    </ChakraProvider>
+  )
 }
 
-export default MyApp
+export default App
