@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Calls</title>
+        <title>next-chakra-starter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
